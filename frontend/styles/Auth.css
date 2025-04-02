@@ -5,7 +5,8 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: #2c3e50;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    animation: fadeIn 1s ease-in-out;
 }
   
 /* Card-style form */
@@ -13,15 +14,22 @@
     background: white;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 400px;
+    transform: scale(0.9);
+    animation: popIn 0.5s ease-out forwards;
+    opacity: 0;
 }
-  
+
 /* Heading (Login & Sign Up) */
 .auth-card h2 {
     margin-bottom: 20px;
     color: black; /* Make the heading text black */
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: slideIn 0.6s ease-in-out;
 }
   
 /* Input fields */
@@ -32,8 +40,15 @@
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
+    transition: 0.3s;
 }
-  
+
+.auth-card input:focus {
+    border-color: #2a5298;
+    outline: none;
+    box-shadow: 0 0 8px rgba(42, 82, 152, 0.3);
+}
+
 /* Primary button (Login & Signup) */
 .auth-btn {
     background: black;
@@ -45,11 +60,12 @@
     border-radius: 6px;
     cursor: pointer;
     margin-top: 10px;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .auth-btn:hover {
     background: #333;
+    transform: scale(1.05);
 }
   
 /* Google button */
@@ -62,11 +78,12 @@
     font-size: 16px;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
 }
   
 .google-btn:hover {
     background: #b33626;
+    transform: scale(1.05);
 }
   
 /* Divider */
@@ -74,6 +91,26 @@
     margin: 15px 0;
     font-size: 14px;
     color: #777;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: #ccc;
+    top: 50%;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
 }
   
 /* Error messages */
@@ -83,18 +120,37 @@
     margin-top: 10px;
 }
 
-  .redirect-text {
+/* Redirect text (For Sign up/Login links) */
+.redirect-text {
     margin-top: 10px;
     font-size: 14px;
     color: #555;
-  }
+}
   
-  .login-link {
+.login-link {
     color: #007bff;
     cursor: pointer;
     text-decoration: underline;
-  }
+    transition: 0.3s;
+}
   
-  .login-link:hover {
+.login-link:hover {
     color: #0056b3;
-  }
+    text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

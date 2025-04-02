@@ -2,9 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { auth, googleProvider } from "../config/firebase";
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import "../../styles/Auth.css"; // Add this file for styling
+import "../../styles/Auth.css"; 
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
+
 const saveUserToDatabase = async (user) => {
   try {
     const response = await fetch(`http://localhost:5000/api/users/${user.email}`);
@@ -62,25 +63,27 @@ export default function Login() {
 
   return (
     <div className="auth-container">
-      <div className="auth-card">
+      <div className="auth-card animate-fade-in">
         <h2>Login</h2>
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="input-field"
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="input-field"
         />
-        <button onClick={handleEmailLogin} className="auth-btn">
+        <button onClick={handleEmailLogin} className="auth-btn animated-btn">
           Login with Email
         </button>
         <div className="divider">or</div>
-        <button onClick={GoogleLogin} className="google-btn">
+        <button onClick={GoogleLogin} className="google-btn animated-btn">
           Sign in with Google
         </button>
         {error && <p className="error-message">{error}</p>}
