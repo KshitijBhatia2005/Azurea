@@ -8,6 +8,6 @@ export default defineConfig({
     host: '0.0.0.0', // Allows access from network
     port: 5173, // Change if needed
     strictPort: true, // Ensures the port is not changed
-    allowedHosts: ['localhost', 'your-domain.com','8392-2402-e280-224d-a0-eb-8733-919e-d5db.ngrok-free.app'], // Add domains that can access the server
+    allowedHosts: ['localhost', 'your-domain.com','azurea.onrender.com'], // Add domains that can access the server
   },
 })
