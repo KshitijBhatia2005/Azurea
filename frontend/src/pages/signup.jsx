@@ -3,7 +3,7 @@ import { useState } from "react";
 import { auth } from "../config/firebase";
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import "../../styles/Auth.css";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 const provider = new GoogleAuthProvider();
 

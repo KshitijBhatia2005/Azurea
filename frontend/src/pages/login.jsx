@@ -3,7 +3,7 @@ import { auth, googleProvider } from "../config/firebase";
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import "../../styles/Auth.css"; // Add this file for styling
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 const saveUserToDatabase = async (user) => {
   try {
