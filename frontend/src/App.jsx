@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { auth } from "./config/firebase";
-import Login from "../../pages/Login";
-import Signup from "./pages/Signup";
-import Home from "./pages/Home";
+import Login from "./pages/login";
+import Signup from "./pages/signup";
+import Home from "./pages/home";
 import Browse from "./pages/Browse"; // Import Browse Page
-import Privacy from "./pages/Privacy";
+import Privacy from "./pages/privacy";
 import { Link } from "react-router-dom";
 export default function App() {
   const [user, setUser] = useState(null);
