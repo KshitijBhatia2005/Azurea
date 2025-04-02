@@ -1,0 +1,84 @@
+/* Ensure the page takes full 1920x1080 space */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Home container */
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background-color: #f5f5f5;
+}
+.home-container h2 {
+  color: black; /* Change text color to black */
+  font-size: 24px; /* Adjust size if needed */
+  font-weight: bold; /* Make it stand out */
+  margin-top: 20px; /* Add some spacing */
+}
+
+
+/* Full-width header image */
+.store-header {
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: white;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.sidebar.open {
+  left: 0; /* Show sidebar */
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px; /* Add space below the top */
+}
+.sidebar button:first-child {
+  margin-top: 60px; /* Push the first button down more */
+}
+
+.sidebar button:hover {
+  background: #444;
+}
+
+/* Menu button (Top Left) */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+}

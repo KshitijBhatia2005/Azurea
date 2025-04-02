@@ -1,0 +1,100 @@
+/* Center the login/signup box for a desktop app */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #2c3e50;
+}
+  
+/* Card-style form */
+.auth-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+  
+/* Heading (Login & Sign Up) */
+.auth-card h2 {
+    margin-bottom: 20px;
+    color: black; /* Make the heading text black */
+}
+  
+/* Input fields */
+.auth-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+  
+/* Primary button (Login & Signup) */
+.auth-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: #333;
+}
+  
+/* Google button */
+.google-btn {
+    background: #db4437;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.google-btn:hover {
+    background: #b33626;
+}
+  
+/* Divider */
+.divider {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #777;
+}
+  
+/* Error messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+  .redirect-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .login-link {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .login-link:hover {
+    color: #0056b3;
+  }
