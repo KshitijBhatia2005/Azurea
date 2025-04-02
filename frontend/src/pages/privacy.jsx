@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/Privacy.css"; // Ensure styles are linked
+import "../../styles/privacy.css"; // Ensure styles are linked
 
 const Privacy = () => {
   return (
